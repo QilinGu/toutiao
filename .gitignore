@@ -1,0 +1,24 @@
+#符合以下条件的文件不提交
+
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+/.idea
+/.settings
+./classpath
+./project
+.DS_Store
+/internship.iml
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#eclipse files
+.classpath
+.project
