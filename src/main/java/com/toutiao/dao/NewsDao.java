@@ -2,13 +2,17 @@ package com.toutiao.dao;
 
 import com.toutiao.model.News;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * Created by MengHan on 2016/7/10.
  */
+@Component
+@Mapper
 public interface NewsDao {
 
     String TABLE_NAME = "news";
@@ -19,7 +23,7 @@ public interface NewsDao {
             ") values (#{title},#{link},#{image},#{likeCount},#{commentCount},#{createdDate},#{userId})"})
     int addNews(News news);
 
-    List<News> selectByUsrIdAndOffset(@Param("userId")int userId, @Param("offset") int offset,
+    List<News> selectByUserIdAndOffset(@Param("userId")int userId, @Param("offset") int offset,
                                       @Param("limit") int limit);
 
 }

@@ -10,6 +10,7 @@
         <include refid="selectFields"/>
         FROM
         <include refid="table"/>
+
         <if test="userId != 0">
             WHERE user_id = #{userId}
         </if>
